@@ -1,0 +1,54 @@
+
+label{
+  color: #aaa8a8;
+  font-family: 'Times New Roman', Times, serif;
+}
+.text-line {
+  background-color: transparent;
+  color: #000000;
+  outline: none;
+  outline-style: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid #c7c7c7 2px;
+  padding: 3px 10px;
+  width: 100%;
+  font-family: 'Times New Roman', Times, serif;
+}
+.text-line:hover{
+  background-color: transparent;
+  color: #000000;
+  outline: none;
+  outline-style: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid #87CEEB 2px;
+  padding: 3px 10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+
+}
+@media screen and (max-width: 600px) {
+  .card-body, .form-group, .text-line {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+#one{
+  text-align: center;
+  border: 3px solid #75c8e9;
+  margin-left: 40px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #c7c7c7;
+}

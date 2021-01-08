@@ -1,0 +1,18 @@
+<div class="container p-4">
+    <div class="card col-6 offset-3" >
+        <img class="card-img-top" src="http://localhost:8000/uploads/{{ prestataire.image }}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><b>Fullname</b> : {{ prestataire.nomcomplet }}</h5>
+          <p class="card-text"><b>Description </b> : {{ prestataire.description }}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><b>City</b> : {{ prestataire.gouvernourat }}</li>
+          <li class="list-group-item"><b>Speciality</b> : {{ prestataire.type  }}</li>
+          <li class="list-group-item"><b>Phone</b> : {{ prestataire.telephone }}</li>
+        </ul>
+        <div class="card-body">
+          <button  class="btn btn-primary mr-3" (click)="getAppointment(prestataire.id)"  > GET Appointment </button>
+          
+        </div>
+      </div>
+</div>

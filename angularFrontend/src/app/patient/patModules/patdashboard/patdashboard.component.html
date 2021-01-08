@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="">
+                <form action="">
+                    <div class="form-group">
+                        <input type="text" placeholder="Search by name ..." class="form-control" (keyup)="getPrestatire($event.target.value)">
+                        
+                    </div>
+
+                </form>
+    </div>
+    <div class="row">
+        <div class="col-4 mt-3" *ngFor="let p of prestataires">
+            <div class="card" >
+                <img
+                  class="img-thumbnail"
+                  style="max-height: 150px;"
+                  src="http://localhost:8000/uploads/{{ p.image }}"
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                  <h2 class="card-title">{{ p.nomcomplet }}</h2>
+                  <h5 class="card-title">{{ p.type }}</h5>
+                  <p class="card-text">{{ p.gouvernourat }}</p>
+                </div>
+                <div class="card-footer">
+                  <button
+                    class="btn btn-primary"
+                    routerLink="/prestataire/details/{{ p.id }}"
+                    type="button"
+                  >
+                    Plus d'info
+                  </button>
+                </div>
+              </div>
+
+        </div>
+    </div>
+
+</div>

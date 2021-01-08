@@ -1,0 +1,32 @@
+
+
+ /* .i{
+    vertical-align: middle;
+    margin-right: 20px;
+  }*/
+
+
+  .profile-card{
+    text-align: center;
+    padding: 0 20px 20px 20px;
+
+  }
+   #image {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .mat-list-item{
+      color:#46575c ;
+    }
+    .mat-list-item:hover{
+    border:solid #c7c7c7 2px;
+  }
+  a{
+    font-family: 'Times New Roman', Times, serif;
+  }
+  a:hover{
+    color: #75c8e9;
+  }
+

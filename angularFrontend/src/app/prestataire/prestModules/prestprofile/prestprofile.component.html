@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="row">
+      <div class="col-md-12 offset=md-1">
+          <div class="row">
+              <div class="col-md-12 register-right">
+
+      <div class="register-form">
+        <form #f="ngForm" (ngSubmit)="updateUser(f)" enctype="multipart/form-data">
+          <div class="mx-auto"  style="width: 200px;">
+            <img [src]="urllink"><br>
+            <input type="file" [(ngModel)]="image" name="image" id="file" class="inputfile" (change) ="selectFiles($event)" required/><br>
+            <label class="text-center" id="one" for="file">Upload Photo</label>
+          </div>
+          <div class="form-group">
+            <label for="inputNom">Full Name</label>
+            <input  [(ngModel)]="nomcomplet" name="nomcomplet"  type="text" class="form-control" id="inputNom">
+          </div>
+          <div class="form-group">
+            <label for="inputEmail">Email</label>
+            <input  [(ngModel)]="email" name="email" type="email" class="form-control" id="inputEmail">
+          </div>
+          <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input  [(ngModel)]="password"  name="password" type="Password" class="form-control" id="inputPassword">
+          </div>
+          <div class="form-group">
+            <label for="inputDescription">Description</label>
+            <textarea
+              type="text"
+              class="form-control"
+              [(ngModel)]="description"
+              name="description"
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="inputType">Speciality</label>
+            <select  [(ngModel)]="type" name="type" class="select-list">
+              <option disabled selected></option>
+              <optgroup label="Médecin">
+                <option value="dentiste">Dentist</option>
+                <option value="gynecologue">Gynecologist</option>
+                <option value="orthopediste">Orthopedist</option>
+                <option value="ophtalmologue">Ophthalmologist</option>
+              </optgroup>
+              <optgroup label="Autres">
+                <option value="clinique">Clinical</option>
+                <option value="laboratoire">Laboratory</option>
+                <option value="hopital">Hospital</option>
+                <option value="pharmacie">Pharmacy</option>
+              </optgroup>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <label for="inputCity">Governorate</label>
+            <select
+              id="gouvernorat"
+              [(ngModel)]="gouvernourat"
+              name="gouvernourat"
+              class="select-list"
+            >
+              <option disabled selected></option>
+              <option value="sfax">Sfax</option>
+              <option value="mahdia">Mahdia</option>
+              <option value="monastir">Monastir</option>
+              <option value="sousse">Sousse</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="inputTelephone">Phone</label>
+            <input  [(ngModel)]="telephone" name="telephone" type="string" class="form-control" id="inputTelephone">
+          </div>
+
+
+        <button type="submit" class="btn btn-primary">Edit Profile</button>
+
+  </form>
+  </div>
+</div>
+
+</div>
+</div>

@@ -1,0 +1,25 @@
+
+<nav class="navbar navbar-expand-lg navbar-transparent">
+  <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="#home"><img src="assets/image/Image1.png" class="nav" alt="logo"></a>
+
+      </div>
+      <div class="collapse navbar-collapse" id="example-navbar-transparent">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a mat-button color="primary" routerLink="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a mat-button color="primary" *ngIf="header" routerLink="/login">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a mat-button color="primary" *ngIf="!header" routerLink="login">Login</a>
+              </li>
+              <li class="nav-item">
+                <a mat-button color="primary" *ngIf="!header" routerLink="registerPrestataire">Register</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>

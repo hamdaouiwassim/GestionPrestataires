@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>Consultation List</h2>
+    <table class="table table-hover table-bordered">
+        <thead>
+          <tr>
+            
+            <th scope="col">Prestataire</th>
+            <th scope="col">Date RDV</th>
+            <th scope="col">Remarques</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let c of consultations">
+            
+
+            <td>{{ c.prestataire }}</td>
+            <td>{{ c.date }}</td>
+            <td>{{ c.remarque }}</td>
+            
+           
+          </tr>
+          
+        </tbody>
+      </table>
+
+</div>
+

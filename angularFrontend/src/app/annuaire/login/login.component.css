@@ -1,0 +1,49 @@
+.container{
+  margin-left:4px;
+  display: flex;
+  flex-direction: row;
+}
+
+.boxlayout {
+  background-color: white ;
+  border: 2px solid black;
+  padding: 5px;
+  margin: 5px;
+}
+.side{
+  width: 100%;
+}
+.login {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.nav {
+  margin-right: -20px;
+}
+#one
+{
+  margin-left: 2px;
+}
+#two
+{
+  margin-left: 2px;
+}
+#o{
+  margin-left: 8px;
+}
+#to{
+  margin-left: 8px;
+}
+#th{
+  margin-left: 8px;
+}
+.btn-primary{
+    position: absolute;
+    bottom: -35px;
+    right: -70px;
+    font-size: 18px; 
+}

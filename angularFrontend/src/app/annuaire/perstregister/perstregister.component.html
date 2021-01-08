@@ -1,0 +1,155 @@
+<div class="container">
+  <div class="col-md-12">
+
+    <div class="col-md-12 register-right">
+      <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            id="prestataire-tab"
+            data-toggle="tab"
+            routerLink="registerPrestataire"
+            role="tab"
+            aria-controls="prestataire"
+            aria-selected="true"
+            >Prestataire</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            id="patient-tab"
+            data-toggle="tab"
+            routerLink="/registerPatient"
+            role="tab"
+            aria-controls="patient"
+            aria-selected="false"
+            >Patient</a
+            >
+        </li>
+      </ul>
+    </div>
+    <div class="card-body">
+      <form [formGroup]="form" (submit)="signup()">
+        <div class="form-group">
+          <label for="inputNom">Full Name</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="nomcomplet"
+          />
+          <div class="alert alert-danger p-2 mt-2"  *ngIf="errors['nomcomplet']">
+            {{ errors["nomcomplet"][0] }}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputEmail">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            formControlName="email"
+          />
+          <div class="alert alert-danger p-2 mt-2"  *ngIf="errors['email']">
+            {{ errors["email"][0] }}
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword">Password</label>
+          <input
+            type="Password"
+            class="form-control"
+            formControlName="password"
+
+          />
+
+          <div class="alert alert-danger p-2 mt-2"  *ngIf="errors['password']">
+            {{ errors["password"][0] }}
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputDescription">Description</label>
+          <textarea
+            type="text"
+            class="form-control"
+            formControlName="description"
+          ></textarea>
+          <div class="alert alert-danger p-2 mt-2"  *ngIf="errors['description']">
+            {{ errors["description"][0] }}
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputType">Speciality</label>
+          <select formControlName="type" class="select-list">
+            <option disabled selected></option>
+            <optgroup label="Médecin">
+              <option value="dentiste">Dentist</option>
+              <option value="gynecologue">Gynecologist</option>
+              <option value="orthopediste">Orthopedist</option>
+              <option value="ophtalmologue">Ophthalmologist</option>
+            </optgroup>
+            <optgroup label="Autres">
+              <option value="clinique">Clinical</option>
+              <option value="laboratoire">Laboratory</option>
+              <option value="hopital">Hospital</option>
+              <option value="pharmacie">Pharmacy</option>
+            </optgroup>
+          </select>
+          <div class="alert alert-danger p-2 mt-2"  *ngIf="errors['type']">
+            {{ errors["type"][0] }}
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress">Adress</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="adresse"
+            id="inputAddress"
+          />
+          <div class="alert alert-danger p-2 mt-2"  *ngIf="errors['adresse']">
+            {{ errors["adresse"][0] }}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputCity">City</label>
+          <select
+            id="gouvernorat"
+            formControlName="gouvernourat"
+            class="select-list"
+          >
+            <option disabled selected></option>
+            <option value="sfax">Sfax</option>
+            <option value="mahdia">Mahdia</option>
+            <option value="monastir">Monastir</option>
+            <option value="sousse">Sousse</option>
+          </select>
+          <div class="alert alert-danger p-2 mt-2"  *ngIf="errors['gouvernourat']">
+            {{ errors["gouvernourat"][0] }}
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="inputTelephone">Phone</label>
+          <input
+            type="number"
+            class="form-control"
+            formControlName="telephone"
+          />
+          <div class="alert alert-danger p-2 mt-2"  *ngIf="errors['telephone']">
+            {{ errors["telephone"][0] }}
+          </div>
+        </div>
+
+        <div class="row" >
+         <div class="col-6">
+          <button type="submit" class="btn btn-primary">Sign Up</button>
+         </div>
+
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

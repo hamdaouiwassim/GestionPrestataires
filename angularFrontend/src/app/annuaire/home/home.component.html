@@ -1,0 +1,48 @@
+
+<div class="view intro-2">
+  <div class="container flex-center">
+    <div class="row pt-5 mt-3 w-100">
+      <form [formGroup]="Searchform" (submit)="Search()" class="row pt-5 mt-3 w-100">
+      <div class="col-sm-12 col-lg-5">
+        
+        <div class="form-group has-info">
+          <select id="speciality" formControlName="type" class="select-list">
+            <option disabled selected>Spécialité</option>
+            <optgroup label="Médecin">
+              <option value="dentiste">Dentiste</option>
+              <option value="gynecologue">Gynécoloque</option>
+              <option value="orthopediste">Orthopédiste</option>
+              <option value="ophtalmologue">Ophtalmologue</option>
+            </optgroup>
+            <optgroup label="Autres">
+              <option value="clinique">Clinique</option>
+              <option value="laboratoire">Laboratoire</option>
+              <option value="hopital">Hôpital</option>
+              <option value="pharmacie">Pharmacie</option>
+            </optgroup>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-12 col-lg-5">
+        <div class="form-group has-info">
+          <select id="gouvernorat" formControlName="gouvernourat" class="select-list">
+            <option disabled selected>Gouvernorat</option>
+            <option value="sfax">Sfax</option>
+            <option value="mahdia">Mahdia</option>
+            <option value="monastir">Monastir</option>
+            <option value="sousse">Sousse</option>
+          </select>
+        </div>
+      </div>
+      <button
+        class="btn btn-outline-primary"
+        
+        type="submit"
+      >
+        <i class="fa fa-search">Search</i>
+      </button>
+    </form>
+    </div>
+  </div>
+</div>
+

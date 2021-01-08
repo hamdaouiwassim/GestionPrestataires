@@ -1,0 +1,11 @@
+.table-striped{
+  margin-top: 100px;
+}
+
+.table-striped img{
+  width: 50px;
+  height: 50px;
+}
+.tr{
+  text-align: center;
+}

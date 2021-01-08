@@ -1,0 +1,13 @@
+.card-img-top{
+  width: 348px;
+  height: 300px;
+}
+
+.btn-primary{
+border-radius: 0.5rem;
+border: none;
+width: 120px;
+background: #03b4e6;
+font-weight: 400;
+color: #fff;
+}

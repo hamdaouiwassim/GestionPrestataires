@@ -1,0 +1,99 @@
+<div class="container">
+  <button class="btn btn-primary mr-3" (click)="open(newmessage)">New Patient Message</button>
+  <button class="btn btn-primary" (click)="open(newmessageprest)">New Prestataire Message</button>
+  <hr />
+  <table class="table table-striped table-bordered">
+    <thead>
+      <th>Sender</th>
+      <th>Type</th>
+      <th>Content</th>
+      <th>Date</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let m of messages">
+        <td>{{ m.sender }}</td>
+        <td>{{ m.type }}</td>
+        <td>{{ m.content }}</td>
+        <td>{{ m.date | date }}</td>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
+
+
+
+
+<ng-template #newmessageprest let-modal>
+<div class="container">
+  <div class="mt-4 col-md-12">
+    <div class="card">
+      <div class="card-body">
+            <form [formGroup]="SendMessageForm" (submit)="SendMessageP()">
+              <div class="form-group">
+                <label for="inputNom">Name</label><br>
+                <input  formControlName="name"  type="text"  class="text-line"  id="inputNom">
+              </div>
+          <div class="form-group">
+            <label for="inputEmail">Prestataire</label><br>
+            <select  formControlName="receiver"   class="text-line">
+                  <option *ngFor="let p of prestataires" class="text-line"  value="{{ p.id }}"  > {{ p.nomcomplet }}</option>    
+          </select>
+          </div>
+          <div class="form-group">
+            <label for="inputPrénom">Upload file</label><br>
+            <input  type="file" formControlName="file"  class="text-line" (change) ="selectFiles($event)"/>
+          </div>
+          <div class="form-group">
+            <label for="inputDescription">Message</label><br>
+            <textarea type="text" class="text-line" formControlName="content"   ></textarea>
+          </div>
+
+          <button type="submit" (click)="modal.close('Save click')" class="btn btn-primary">Send Message</button>
+
+          </form>
+        </div>
+        </div>
+  </div>
+</div>
+
+</ng-template>
+
+<ng-template #newmessage let-modal>
+  <div class="container">
+    <div class="mt-4 col-md-12">
+      <div class="card">
+        <div class="card-body">
+              <form [formGroup]="SendMessageForm" (submit)="SendMessage()">
+                <div class="form-group">
+                  <label for="inputNom">Name</label><br>
+                  <input  formControlName="name"  type="text"  class="text-line"  id="inputNom">
+                </div>
+            <div class="form-group">
+              <label for="inputEmail">Prestataire</label><br>
+              <select  formControlName="receiver"   class="text-line">
+                    <option *ngFor="let pt of patients" class="text-line"  value="{{ pt.id }}"  > {{ pt.nom }} {{ pt.prenom }}</option>    
+            </select>
+            </div>
+            <div class="form-group">
+              <label for="inputPrénom">Upload file</label><br>
+              <input  type="file" formControlName="file"  class="text-line" (change) ="selectFiles($event)"/>
+            </div>
+            <div class="form-group">
+              <label for="inputDescription">Message</label><br>
+              <textarea type="text" class="text-line" formControlName="content"   ></textarea>
+            </div>
+  
+            <button type="submit" (click)="modal.close('Save click')" class="btn btn-primary">Send Message</button>
+  
+            </form>
+          </div>
+          </div>
+    </div>
+  </div>
+  
+  </ng-template>
+
+
